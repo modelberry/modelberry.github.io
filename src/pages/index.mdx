@@ -1,0 +1,22 @@
+---
+topic:
+  heading: Modelberry factory
+  abstract: Sync Typescript to Contentful. Two way. Models and content.
+  image: topicImage
+  action:
+    heading: Reference
+    url: /reference
+---
+export { PageLayout as default } from '../page-layout/page-layout'
+import { Topic } from '@jaccomeijer/green-lib'
+import topicImage from '../assets/images/pexels-gdtography-911758.jpg'
+import { globals } from '../config/globals.js'
+
+<div class="container-full">
+  <Topic
+    globals={globals}
+    images={{topicImage}}
+    topic={frontmatter.topic}
+    variant="hero"
+  />
+</div>
