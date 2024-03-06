@@ -1,22 +1,108 @@
 ---
-topic:
+navigation:
+  heading: Home
+  order: 10
+openerTopic:
   heading: Modelberry factory
   abstract: Sync Typescript to Contentful. Two way. Models and content.
   image: topicImage
   action:
-    heading: Reference
-    url: /reference
+    heading: Get started with Mbfactory
+    icon: external-link
+    url: https://www.npmjs.com/package/@modelberry/mbfactory
+
+modelDataTopic:
+  heading: Model your data in sync
+  abstract: Data modeling is a process. As a software project grows, data models change. Mbfactory provides an easy way to keep your data models in sync with your development.
+  icon: edit
+  action:
+    heading: Get started with Mbfactory
+    icon: external-link
+    url: https://www.npmjs.com/package/@modelberry/mbfactory
+
+nodeTopic:
+  heading: Node.js
+  abstract: Mbfactory is available as a free Node.js package on npm.
+  icon: package
+
+tsdocTopic:
+  heading: TSDoc
+  abstract: Mbfactory uses TSDoc tags to annotate typescript interfaces. The same tags you use to generate documentation.
+  icon: tag
+
+opensourceTopic:
+  heading: Open source
+  abstract: Mbfactory is free to use and open source.
+  icon: github
+
+extendableTopic:
+  heading: Extendable
+  abstract: Mbfactory is structured around plugins. Easily add your own.
+  icon: package
+
+
 ---
-export { PageLayout as default } from '../page-layout/page-layout'
-import { Topic } from '@jaccomeijer/green-lib'
+export { Layout as default } from '../layout/layout.jsx'
+import { Topic, TopicList } from '@jaccomeijer/green-lib'
 import topicImage from '../assets/images/pexels-gdtography-911758.jpg'
 import { globals } from '../config/globals.js'
 
-<div class="container-full">
+<div class="s-popout">
   <Topic
+    class="u-margin-block-start-0"
+    data-variant="hero"
     globals={globals}
     images={{topicImage}}
-    topic={frontmatter.topic}
-    variant="hero"
+    topic={frontmatter.openerTopic}
   />
+</div>
+
+<Topic
+  data-variant="headline"
+  globals={globals}
+  topic={frontmatter.modelDataTopic}
+/>
+
+<div class="s-wrapper" style="--wrapper-width: 45rem">
+
+---
+
+## How does it work?
+
+The example below shows how TSDoc tags are used to annotate typescript interfaces.
+
+```ts
+/** @modelberry
+ * - {@plugin "@modelberry/plugin-contentful/plain"}
+ * - {@type someModel}
+ * - {@displayField title}
+ * - {@description Some model description}
+ * - {@name someModel}
+ */
+export interface ContentfulSomeModel {
+  /** @modelberry {@ignore} */
+  __typename?: string
+
+  /** @modelberry
+   * - {@name Title within Contentful}
+   * - {@required true}
+   * - {@type Symbol}
+   * - {@widgetId singleLine}
+   * - {@helpText Used within Contentful, will never be displayed.}
+   */
+  title?: string
+}
+```
+
+---
+
+<TopicList 
+  class="s-grid u-grid-two-cols u-gap-m"
+  data-variant="block"
+  globals={globals}
+  images={{ topicImage }}
+  topics={[frontmatter.nodeTopic, frontmatter.tsdocTopic, frontmatter.opensourceTopic, frontmatter.extendableTopic]}
+/>
+
+
 </div>

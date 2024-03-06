@@ -1,0 +1,65 @@
+---
+navigation:
+  heading: Packages
+  order: 20
+openerTopic:
+  heading: Packages
+  abstract: Overview of Modelberry packages on npm.
+  icon: package
+
+anyTopic:
+  heading: any-element
+  abstract: The Any element with CSS reset and CSS Emotion props.
+  icon: package
+  action:
+    heading: any-element
+    icon: external-link
+    url: https://www.npmjs.com/package/@modelberry/any-element
+
+cssTopic:
+  heading: css-theme
+  abstract: Library for working with css theme variables.
+  icon: package
+  action:
+    heading: css-theme
+    icon: external-link
+    url: https://www.npmjs.com/package/@modelberry/css-theme
+
+mbfactoryTopic:
+  heading: mbfactory
+  abstract: Sync Typescript to Contentful. Two way. Models and content.
+  icon: package
+  action:
+    heading: mbfactory
+    icon: external-link
+    url: https://www.npmjs.com/package/@modelberry/mbfactory
+
+markdownTopic:
+  heading: parse-markdown-links
+  abstract: Library for parsing links in markdown.
+  icon: package
+  action:
+    heading: parse-markdown-links
+    icon: external-link
+    url: https://www.npmjs.com/package/@modelberry/parse-markdown-links
+
+---
+export { Layout as default } from '../layout/layout.jsx'
+import { Topic, TopicList } from '@jaccomeijer/green-lib'
+import openerImage from '../assets/images/pexels-gdtography-911758.jpg'
+import { globals } from '../config/globals.js'
+
+<Topic
+  data-variant="headline"
+  globals={globals}
+  topic={frontmatter.openerTopic}
+/>
+
+---
+
+<TopicList 
+  class="s-grid u-grid-two-cols u-gap-m"
+  data-variant="card"
+  globals={globals}
+  topics={[frontmatter.anyTopic, frontmatter.cssTopic, frontmatter.mbfactoryTopic, frontmatter.markdownTopic]}
+/>
