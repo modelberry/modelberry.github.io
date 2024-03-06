@@ -4,7 +4,7 @@ import { actions } from './actions.js'
 
 const buildEnv = {
   assetUrl: '/assets/',
-  baseUrl: '/green-reference',
+  baseUrl: '/',
 }
 
 const serveEnv = {
