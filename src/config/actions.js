@@ -9,7 +9,7 @@ export const actions = {
   social: [
     {
       icon: 'github',
-      url: 'https://github.com/modelberry',
+      url: 'https://github.com/modelberry/modelberry.github.io',
     },
   ],
 }
