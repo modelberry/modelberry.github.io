@@ -40,9 +40,8 @@ extendableTopic:
   abstract: Mbfactory is structured around plugins. Easily add your own.
   icon: package
 
-
 ---
-export { Layout as default } from '../layout/layout.jsx'
+export { TextLayout as default } from '../layout/text-layout.jsx'
 import { Topic, TopicList } from '@jaccomeijer/green-lib'
 import topicImage from '../assets/images/pexels-gdtography-911758.jpg'
 import { globals } from '../config/globals.js'
@@ -62,8 +61,6 @@ import { globals } from '../config/globals.js'
   globals={globals}
   topic={frontmatter.modelDataTopic}
 />
-
-<div class="s-wrapper" style="--wrapper-width: 45rem">
 
 ---
 
@@ -103,6 +100,3 @@ export interface ContentfulSomeModel {
   images={{ topicImage }}
   topics={[frontmatter.nodeTopic, frontmatter.tsdocTopic, frontmatter.opensourceTopic, frontmatter.extendableTopic]}
 />
-
-
-</div>
