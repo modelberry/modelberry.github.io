@@ -1,6 +1,7 @@
 .topic-hero {
 
   color: var(--color-primary-600);
+
   @media (prefers-color-scheme: dark) {
     color: var(--color-primary-100);
   }
@@ -8,6 +9,14 @@
   .topic-abstract {
     font-size: var(--font-size-3);
     font-weight: var(--font-body-weight);
+  }
+}
+
+.topic-action {
+  @media (prefers-color-scheme: dark) {
+    border: transparent;
+    color: var(--color-mono-700);
+    background-color: var(--color-primary-100);
   }
 }
 
