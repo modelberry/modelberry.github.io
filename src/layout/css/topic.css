@@ -12,14 +12,6 @@
   }
 }
 
-.topic-action {
-  @media (prefers-color-scheme: dark) {
-    border: transparent;
-    color: var(--color-mono-700);
-    background-color: var(--color-primary-100);
-  }
-}
-
 .topic-icon {
   color: var(--color-primary-500);
 }

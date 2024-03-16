@@ -5,8 +5,8 @@
   --border-radius-circle: 9999px;
   --border-radius-pill: 0.5rem;
   --border-radius-rounded: 0.35rem;
-  --button-primary-color: var(--color-primary-500);
-  --button-primary-contrast-color: var(--color-mono-000);
+  --button-primary-color: hsl(248, 100%, 30%);
+  --button-primary-contrast-color: hsl(0, 0%, 100%);
   --color-mono-000: hsl(0, 0%, 100%);
   --color-mono-100: hsl(0, 0%, 90%);
   --color-mono-200: hsl(0, 0%, 75%);
@@ -149,13 +149,6 @@
     .topic-abstract {
       font-size: var(--font-size-3);
       font-weight: var(--font-body-weight);
-    }
-  }
-  .topic-action {
-    @media (prefers-color-scheme: dark) {
-      border: transparent;
-      color: var(--color-mono-700);
-      background-color: var(--color-primary-100);
     }
   }
   .topic-icon {
