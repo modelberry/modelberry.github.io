@@ -1,5 +1,10 @@
 .topic-hero {
+
   color: var(--color-primary-600);
+  @media (prefers-color-scheme: dark) {
+    color: var(--color-primary-100);
+  }
+
   .topic-abstract {
     font-size: var(--font-size-3);
     font-weight: var(--font-body-weight);
