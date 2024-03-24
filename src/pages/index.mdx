@@ -46,10 +46,10 @@ import { Topic, TopicList } from '@jaccomeijer/green-lib'
 import topicImage from '../assets/images/pexels-gdtography-911758.jpg'
 import { globals } from '../config/globals.js'
 
-<div class="s-popout">
+<div className="s-popout">
   <Topic
-    class="u-margin-block-start-0"
-    data-variant="hero"
+    className="u-margin-block-start-0"
+    variant="hero"
     globals={globals}
     images={{topicImage}}
     topic={frontmatter.openerTopic}
@@ -57,7 +57,7 @@ import { globals } from '../config/globals.js'
 </div>
 
 <Topic
-  data-variant="headline"
+  variant="headline"
   globals={globals}
   topic={frontmatter.modelDataTopic}
 />
@@ -94,8 +94,8 @@ export interface ContentfulSomeModel {
 ---
 
 <TopicList 
-  class="s-grid u-grid-two-cols u-gap-m"
-  data-variant="block"
+  className="s-grid u-grid-two-cols u-gap-m"
+  variant="block"
   globals={globals}
   images={{ topicImage }}
   topics={[frontmatter.nodeTopic, frontmatter.tsdocTopic, frontmatter.opensourceTopic, frontmatter.extendableTopic]}

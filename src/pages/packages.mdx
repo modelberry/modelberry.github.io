@@ -50,7 +50,7 @@ import openerImage from '../assets/images/pexels-gdtography-911758.jpg'
 import { globals } from '../config/globals.js'
 
 <Topic
-  data-variant="headline"
+  variant="headline"
   globals={globals}
   topic={frontmatter.openerTopic}
 />
@@ -58,8 +58,8 @@ import { globals } from '../config/globals.js'
 ---
 
 <TopicList 
-  class="s-grid u-grid-two-cols u-gap-m"
-  data-variant="card"
+  className="s-grid u-grid-two-cols u-gap-m"
+  variant="card"
   globals={globals}
   topics={[frontmatter.anyTopic, frontmatter.cssTopic, frontmatter.mbfactoryTopic, frontmatter.markdownTopic]}
 />
